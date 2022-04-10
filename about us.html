@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="3d.css" />
+
+    <!-- custom css file link  -->
+
+    <link rel="stylesheet" href="navbar.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <header class="lnk">
+      <strong>
+        <a href="#" class="logo lnk"
+          >W<span class="fas fa-virus"></span>RLD W<span
+            class="fas fa-rocket"
+          ></span
+          >R 3</a
+        >
+      </strong>
+
+      <div id="menu" class="fas fa-bars"></div>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="causes.html">Causes</a>
+        <a href="effects.html">Effects</a>
+        <a href="war.html">Other Wars</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="about us.html" class="active">About Us</a>
+      </nav>
+    </header>
+
+    <!-- NAVBAR ENDS -->
+
+    <div class="container">
+      <h1 class="summary heading">The Team</h1>
+      <p class="summary">
+        Hello There, We are a team of two and are super excited to participate
+        in our first Web Hackathon
+      </p>
+      <div class="crd">
+        <div class="card rgb" data-tilt>
+          <div class="card-image card2"></div>
+          <div class="card-text card2">
+            <h2 style="text-align: center">Ankur Sarkar</h2>
+            <span style="text-align: center" class="clg"
+              >JIS College of Engineering</span
+            >
+
+            <p style="text-align: center">
+              Hey Everyone, This is Ankur Sarkar a Sophomore pursuing B.Tech in
+              ECE from JIS College Of Engineering. I'm Super Excited to
+              participate in this Hackathon. I Hope I can learn a Lot from This.
+            </p>
+            <div class="share fa-3x" style="width: 100%; margin: 5px 47px">
+              <a
+                style="width: 20px; height: 20px"
+                href="https://wa.me/+917449600707"
+                class="fab fa-whatsapp"
+              ></a>
+              <a
+                href="https://www.facebook.com/Ank.Sar.02"
+                class="fab fa-facebook"
+              ></a>
+              <a
+                href="https://github.com/ankur02sarkar"
+                class="fab fa-github"
+              ></a>
+              <a
+                href="mailto:sarkarrohonankur@gmail.com"
+                class="fab fa fa-envelope"
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/ankur-sarkar/"
+                class="fab fa-linkedin"
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="card rgb" data-tilt>
+          <div class="card-image card3"></div>
+          <div class="card-text card3">
+            <h2 style="text-align: center">Vimal Anand</h2>
+            <span style="text-align: center" class="clg"
+              >JIS College of Engineering</span
+            >
+
+            <p style="text-align: center">
+              Myself Vimal Anand pursuing Btech in ECE from JIS College of
+              Engineering. My Personal interest is regarding
+              technology. And I'm Interested to participate and learn from this
+              Hackathon
+            </p>
+            <div class="share fa-3x" style="width: 100%; margin: 5px 47px">
+              <a
+                style="width: 20px; height: 20px"
+                href="https://wa.me/+919473383500"
+                class="fab fa-whatsapp"
+              ></a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100069420204358"
+                class="fab fa-facebook"
+              ></a>
+              <a href="https://github.com/Vimal2023" class="fab fa-github"></a>
+              <a
+                href="mailto:vimal83500@gmail.com"
+                class="fab fa fa-envelope"
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/vimal-anand-9917a1212/"
+                class="fab fa-linkedin"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="foot">
+      <span
+        >@
+        <a href="https://github.com/ankur02sarkar">Ankur Sarkar</a>
+        &
+        <a href="https://github.com/Vimal2023">Vimal Anand</a>
+        2022
+      </span>
+    </footer>
+    <script src="vanilla-tilt.min.js"></script>
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="navbar.js"></script>
+  </body>
+
+  <!-- JAVASCRIPT -->
+
+  <script type="text/javascript">
+    const slider = document.querySelector(".slider");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const slides = document.querySelectorAll(".slide");
+    const slideIcons = document.querySelectorAll(".slide-icon");
+    const numberOfSlides = slides.length;
+    var slideNumber = 0;
+
+    //image slider next button
+    nextBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber++;
+
+      if (slideNumber > numberOfSlides - 1) {
+        slideNumber = 0;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider previous button
+    prevBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber--;
+
+      if (slideNumber < 0) {
+        slideNumber = numberOfSlides - 1;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider autoplay
+    var playSlider;
+
+    var repeater = () => {
+      playSlider = setInterval(function () {
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove("active");
+        });
+
+        slideNumber++;
+
+        if (slideNumber > numberOfSlides - 1) {
+          slideNumber = 0;
+        }
+
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+      }, 4000);
+    };
+    repeater();
+
+    //stop the image slider autoplay on mouseover
+    slider.addEventListener("mouseover", () => {
+      clearInterval(playSlider);
+    });
+
+    //start the image slider autoplay again on mouseout
+    slider.addEventListener("mouseout", () => {
+      repeater();
+    });
+  </script>
+
+  <!-- JAVASCRIPT ENDS -->
+</html>
